@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Your description">
-    <meta name="author" content="Your name">
+    <meta name="description" content="This is my personal website">
+    <meta name="author" content="George Thomas">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -67,20 +67,7 @@
                         <a class="nav-link page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </span>
+               
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
@@ -339,6 +326,22 @@
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Can I know more about you ?
+                                </button>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    I am always happy to share about my life and experiences. I was born in a family of three. Completed
+                                    my matriculation and intermediate from one of the best schools in our locality. Then joined and completed 
+                                    Bachelors degree in Mathematics from the only Government college in our district. After that did some jobs
+                                    including teaching as a guest tutor. Then I joined Crossroads Academy and currently I am doing their 6 months
+                                    training program. That is almost all about me and my journey.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     How can I contact you ?
                                 </button>
                             </div>
@@ -420,16 +423,19 @@
                     <!-- Contact Form -->
                     <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycby2unxmvpumY23fdXQGfA6y_dqCm48qHe6dCirk_7l7N7W7OkOed7Oyo7sXu1xpL1Lt/exec">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control-input" id="cname" required>
+                            <input type="text" name="name" class="form-control-input" id="cname">
                             <label class="label-control" for="cname">Name</label>
+                            <p id="noname"></p>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control-input" id="cemail" required>
+                            <input type="" name="email" class="form-control-input" id="cemail" >
                             <label class="label-control" for="cemail">Email</label>
+                            <p id="noemail"></p>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" name="projectdetail" id="cmessage" required></textarea>
+                            <textarea class="form-control-textarea" name="projectdetail" id="cmessage" ></textarea>
                             <label class="label-control" for="cmessage">Project details</label>
+                            <p id="nomessage"></p>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="form-control-submit-button">Submit</button>

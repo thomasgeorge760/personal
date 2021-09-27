@@ -76,3 +76,55 @@
 	});
 
 })(jQuery);
+
+
+
+
+let name = document.getElementById("cname");
+let email = document.getElementById("cemail");
+
+let message = document.getElementById("cmessage");
+let form = document.getElementById("gform");
+
+
+ 
+form.addEventListener("submit", (e)=>{
+    let flag = 0;
+    var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+    let mail = email.value;
+    console.log(mail)
+    
+
+    if (name.value === "" || null){
+        document.getElementById("noname").innerHTML = "Name required."
+        flag++;
+    }
+    
+    if (email.value === "" || null){
+        flag ++;
+        document.getElementById("noemail").innerHTML = "Email required."
+    }
+     if (regx.test (mail)){
+        console.log(mail)
+        document.getElementById("noemail").innerHTML = "Email valid."
+    }
+    else {
+        flag ++;
+        document.getElementById("noemail").innerHTML = "Email not valid."
+    }
+
+    if (message.value === "" || null){
+        flag ++;
+        document.getElementById("nomessage").innerHTML = "Message required"
+        
+    }
+    if ( flag===0){
+        alert("form submitted successfully")
+    }
+
+    if (flag > 0){
+        e.preventDefault()
+        
+    }
+  
+})
