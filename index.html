@@ -423,17 +423,17 @@
                     <!-- Contact Form -->
                     <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycby2unxmvpumY23fdXQGfA6y_dqCm48qHe6dCirk_7l7N7W7OkOed7Oyo7sXu1xpL1Lt/exec">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control-input" id="cname">
+                            <input type="text" onblur="namecheck()" name="name" class="form-control-input" id="cname">
                             <label class="label-control" for="cname">Name</label>
                             <p id="noname"></p>
                         </div>
                         <div class="form-group">
-                            <input type="" name="email" class="form-control-input" id="cemail" >
+                            <input type="" onblur="emailcheck()" name="email" class="form-control-input" id="cemail" >
                             <label class="label-control" for="cemail">Email</label>
                             <p id="noemail"></p>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" name="projectdetail" id="cmessage" ></textarea>
+                            <textarea onblur="messagecheck()" class="form-control-textarea" name="projectdetail" id="cmessage" ></textarea>
                             <label class="label-control" for="cmessage">Project details</label>
                             <p id="nomessage"></p>
                         </div>

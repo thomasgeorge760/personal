@@ -87,33 +87,59 @@ let message = document.getElementById("cmessage");
 let form = document.getElementById("gform");
 
 
+
+function namecheck(){
+    let regx1=/\d/;
+    
+    if(name.value==="" || name.value===" " || regx1.test(name.value)==true){
+        name.style.borderColor="red";
+        document.getElementById("noname").innerHTML="Please enter a valid name..";
+    }else{
+        name.style.borderColor="green";
+        document.getElementById("noname").innerHTML="";
+    }
+}
+
+function emailcheck(){
+    let regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+).([a-z]+)(.[a-z]+)?$/;
+
+    if(email.value==="" || email.value===" " || regx.test(email.value)==false){
+        email.style.borderColor="red";
+        document.getElementById("noemail").innerHTML="Please enter a valid email id..";
+    }else{
+        email.style.borderColor="green";
+        document.getElementById("noemail").innerHTML="";
+    }
+
+}
+function messagecheck(){
+    if(message.value==="" || message.value===" "){
+        message.style.borderColor="red";
+        document.getElementById("nomessage").innerHTML="Please enter some details..";
+    }else{
+        message.style.borderColor="green";
+        document.getElementById("nomessage").innerHTML="";
+    }
+}
+
  
 form.addEventListener("submit", (e)=>{
     let flag = 0;
-    var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
-    let mail = email.value;
-    console.log(mail)
+   
     
 
-    if (name.value === "" || null){
+    if (name.value === "" || name.value===" "){
         document.getElementById("noname").innerHTML = "Name required."
         flag++;
     }
     
-    if (email.value === "" || null){
+    if (email.value === "" || email.value===" "){
         flag ++;
         document.getElementById("noemail").innerHTML = "Email required."
     }
-     if (regx.test (mail)){
-        console.log(mail)
-        document.getElementById("noemail").innerHTML = "Email valid."
-    }
-    else {
-        flag ++;
-        document.getElementById("noemail").innerHTML = "Email not valid."
-    }
+     
 
-    if (message.value === "" || null){
+    if (message.value === "" || message.value===" "){
         flag ++;
         document.getElementById("nomessage").innerHTML = "Message required"
         
